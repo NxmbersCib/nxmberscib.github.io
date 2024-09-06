@@ -4,6 +4,8 @@
     --primary: #ff7e28;
     --secondary: #4a89ad;
 
+    --gray: #c9c9c9;
+
     --primary-fontsize: 3rem;
 }
 
@@ -28,7 +30,6 @@ body {
     background-image: linear-gradient(to top, #dfe9f3 0%, var(--white) 100%);
 }
 
-
 .container {
     /* width: 120rem; */
     max-width: 120rem;
@@ -47,6 +48,11 @@ body {
     width: 90%;
     font-size: 2rem;
     border-radius: .5rem;
+    border: none;
+}
+
+.button:hover {
+    cursor: pointer;
 }
 
 @media (min-width: 480px) {
@@ -146,14 +152,16 @@ p {
     color: var(--white)
 }
 
+
+.hero-content .location p {
+    font-size: 1.5rem;
+}
+
 .hero-content .location {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-}
-
-.hero-content .location p {
-    font-size: 1.5rem;
+    justify-content: center;
 }
 
 @media (min-width: 768px) {
@@ -192,4 +200,56 @@ p {
 .service h3 {
     color: var(--black);
     text-align: center;
+}
+
+/* Contact */
+
+.form {
+    background-color: var(--gray);
+    width: min(60rem, 100%);
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: .6555rem;
+}
+
+.form fieldset {
+    border: none;
+}
+
+.form legend {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.fieldset-container {}
+
+.fieldset-singlefield {
+    margin-bottom: 1rem;
+}
+
+.fieldset-singlefield label {
+    color: var(--black);
+    font-weight: bold;
+    display: block;
+}
+
+.fieldset-singlefield input[type="text"],
+.fieldset-singlefield input[type="email"],
+.fieldset-singlefield textarea {
+    width: 100%;
+    border: none;
+    padding: .8rem;
+    border-radius: .5rem;
+}
+
+.sendbutton .button {
+    width: 100%;
+}
+
+
+#container {
+    padding: 2rem;
 }
