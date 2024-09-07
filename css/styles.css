@@ -1,8 +1,8 @@
 :root {
     --white: #ffffff;
     --black: #212121;
-    --primary: #ff7e28;
-    --secondary: #4a89ad;
+    --primary: #2a5994;
+    --secondary: #be9826;
 
     --gray: #c9c9c9;
 
@@ -28,6 +28,18 @@ body {
     /* 1rem = 10px */
     font-family: "Rubik", sans-serif;
     background-image: linear-gradient(to top, #dfe9f3 0%, var(--white) 100%);
+}
+
+header {
+    justify-content: center;
+    display: flex;
+    background-color: #3f80cf;
+
+}
+
+header h1 {
+    color: lavenderblush;
+    font-weight: 500;
 }
 
 .container {
@@ -88,22 +100,36 @@ h3 {
     text-align: center;
 }
 
-
-.nav-bg {
-    background-color: var(--secondary);
+.stroked-text {
+    text-decoration: line-through;
 }
 
+/* .coming-soon-service {
+} */
+
+.coming-soon-service::after {
+    font-style: italic;
+    font-size: 1.25rem;
+}
+
+
+.nav-bg {
+    background-color: var(--primary);
+}
+
+/* 
 .main-nav {
     display: flex;
     flex-direction: column;
+} */
+.main-nav {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
-@media (min-width: 768px) {
-    .main-nav {
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
-}
 
 .main-nav a {
     width: auto;
@@ -111,26 +137,41 @@ h3 {
     text-align: center;
     color: var(--white);
     text-decoration: none;
-    font-size: 1.66rem;
-    font-weight: normal;
+    font-size: 1.50rem;
+    font-weight: 200;
     padding: 1rem;
 }
 
+@media (min-width: 768px) {
+
+    /* .main-nav {
+        flex-direction: row;
+        justify-content: space-evenly;
+    } */
+    .main-nav a {
+        font-size: 1.66rem;
+        font-weight: normal;
+    }
+}
+
+
 .main-nav a:hover {
-    background-color: var(--primary);
+    background-color: var(--secondary);
     color: var(--black)
 }
 
 .hero {
-    background-image: url("../assets/banner.jpeg");
+    /* background-image: url("../assets/banner.jpeg"); */
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+    /* background-repeat: no-repeat; */
+    /* background-position: center center; */
     height: 450px;
     position: relative;
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
+    margin: 0;
 }
 
+/*
 .hero-content {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.712);
@@ -161,8 +202,162 @@ p {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
+    justify-content: center; 
+} */
+
+.slider-image img {
+    /* width: fit-content;
+    height: fit-content; */
+    object-fit: cover;
+    vertical-align: middle;
     justify-content: center;
 }
+
+.slider-button-container {
+    text-align: center;
+}
+
+.slider-container {
+    height: 45rem;
+    width: 100%;
+}
+
+.slider {
+    height: 45rem;
+    width: 100%;
+    position: relative;
+    display: flex;
+    /* margin: auto; */
+    background-color: #000000;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Botones anterior y siguiente */
+.previmg,
+.nextimg {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    background-color: var(--primary);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+}
+
+.previmg {
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.nextimg {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.previmg:hover,
+.nextimg:hover {
+    background-color: var(--secondary)
+}
+
+/* Descripción de las fotos */
+.description {
+    color: #f2f2f2;
+    /* background-color: #000000b2; */
+    font-size: 16px;
+    right: 0;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    text-shadow: 1px 1px 1rem #000000;
+}
+
+/* Numeración de las fotos */
+.enumeration {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-shadow: 1px 1px 2px #000000;
+}
+
+/* Puntos indicadores de las fotos */
+.slider-point {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 1rem 1rem;
+    background-color: #C0C0C0;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+/* Color de fondo del punto seleccionado */
+.active,
+.slider-point:hover {
+    background-color: var(--primary);
+}
+
+/* Efecto de transición al cambiar de foto */
+.slider-image {
+    display: none;
+    -webkit-animation-name: fade;
+    /* el prefijo -webkit- es para soporte para chrome */
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+/* Definir los fotogramas clave de la animación */
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* Configuración para pantallas diminutas */
+@media only screen and (max-width: 480px) {
+
+    .previmg,
+    .nextimg,
+    .description {
+        font-size: 11px;
+    }
+
+    .slider {
+        max-width: 100%;
+    }
+}
+
+
+/*
+ Services
+*/
 
 @media (min-width: 768px) {
     .services {
@@ -195,11 +390,18 @@ p {
 .service p {
     color: var(--black);
     text-align: center;
+    font-size: 2rem;
 }
 
 .service h3 {
     color: var(--black);
     text-align: center;
+}
+
+.service h3 span:not(.stroked-text) {
+    color: #666666;
+    text-align: center;
+    font-style: italic !important;
 }
 
 /* Contact */

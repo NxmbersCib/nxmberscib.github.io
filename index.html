@@ -8,10 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+    <link rel="icon" q type="image/png" href="https://s.namemc.com/2d/skin/face.png?id=1dd9041d59a120db">
+
     <link
         href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
-    <title>Minecraft Freelancer Developer</title>
+    <title>NxmbersCib's Portfolio</title>
 
     <link rel="preload" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/normalize.css">
@@ -21,6 +23,7 @@
 </head>
 
 <body>
+
     <header>
         <h1 class="title">NxmbersCib - Minecraft Developer</h1>
     </header>
@@ -34,8 +37,44 @@
         </nav>
     </div>
 
-    <section class="hero">
-        <div class="hero-content">
+    <div class="slider-container">
+        <!-- <section class="hero"> -->
+        <section class="slider">
+
+            <div class="slider-image">
+                <div class="enumeration">Project (1/5) - Ryuko Matoi</div>
+                <img src="./assets/ryuko.jpg" width="100%">
+                <div class="description">MI VIEJAA</div>
+            </div>
+
+            <div class="slider-image">
+                <div class="enumeration">Project (2/5) - Convex!</div>
+                <img src="./assets/convex.png" width="100%">
+                <div class="description">Codea del culo</div>
+            </div>
+
+            <div class="slider-image">
+                <div class="enumeration">Project (3/5) - Demos</div>
+                <img src="./assets/demos.png" width="100%">
+                <div class="description">Ladrón pendejo W geo borra la cuenta</div>
+            </div>
+
+            <div class="slider-image">
+                <div class="enumeration">Project (4/5) - The Rumbling</div>
+                <img src="./assets/rumbling.jpg" width="100%">
+                <div class="description">Is coming for you.</div>
+            </div>
+
+            <div class="slider-image">
+                <div class="enumeration">Project (5/5) - Bogotá</div>
+                <img src="./assets/bogota.jpeg" width="100%">
+                <div class="description">SAQUENME DE AQUÍ</div>
+            </div>
+
+            <a class="nextimg" onclick="nextImage(1)">&#10097;</a>
+            <a class="previmg" onclick="nextImage(-1)">&#10096;</a>
+        </section>
+        <!-- <div class="hero-content">
             <h2 class="title">Bedrock Add-On Making & Fabric Modding</h2>
 
             <div class="location">
@@ -51,9 +90,35 @@
             </div>
 
             <a href="#" class="button">Contact</a>
-        </div> <!-- .hero-content end -->
+            <img class="slider-item"
+                src="https://images.unsplash.com/photo-1580501170961-bb0dbf63a6df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2970&q=80" />
+            <img class="slider-item"
+                src="https://images.unsplash.com/photo-1580501170888-80668882ca0c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80" />
+            <img class="slider-item"
+                src="https://images.unsplash.com/photo-1572508589584-94d778209dd9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80" />
+        </div> .hero-content end
 
-    </section>
+        <div class="slider">
+            <img
+                src="https://images.unsplash.com/photo-1580501170961-bb0dbf63a6df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2970&q=80" />
+            <img
+                src="https://images.unsplash.com/photo-1580501170888-80668882ca0c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80" />
+            <img
+                src="https://images.unsplash.com/photo-1572508589584-94d778209dd9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80" />
+        </div> -->
+
+        <!-- </section> -->
+
+
+
+        <section class="slider-button-container">
+            <span class="slider-point" onclick="imageSelected(1)"></span>
+            <span class="slider-point" onclick="imageSelected(2)"></span>
+            <span class="slider-point" onclick="imageSelected(3)"></span>
+            <span class="slider-point" onclick="imageSelected(4)"></span>
+            <span class="slider-point" onclick="imageSelected(5)"></span>
+        </section>
+    </div>
 
     <main class="container shadow" id="container">
         <h2 class="services-title">My services</h2>
@@ -61,7 +126,7 @@
         <div class="services">
 
             <section class="service">
-                <h3>Addon Making</h3>
+                <h3>Bedrock Add-Ons</h3>
                 <div class="service-icon">
                     <img src="./assets/fabricmc.png" width="22" height="22" alt="">
                     <img src="./assets/fabricmc.png" width="22" height="22" alt="">
@@ -74,7 +139,7 @@
             </section>
 
             <section class="service">
-                <h3>Mod Making</h3>
+                <h3><span class="stroked-text">Fabric Mod Development</span><span><br>Coming soon...</span></h3>
                 <div class="service-icon">
                     <img src="./assets/fabricmc.png" width="22" height="22" alt="">
                     <img src="./assets/fabricmc.png" width="22" height="22" alt="">
@@ -126,7 +191,7 @@
                         </div>
 
                         <div class="sendbutton">
-                            <button type="submit", class="button">Enviar</button>
+                            <button type="submit" , class="button">Enviar</button>
                         </div>
 
                     </fieldset>
@@ -135,11 +200,16 @@
             </div>
         </section>
 
+
+
     </main>
 
     <footer>
         <p>All rights reserved. NxmbersCib</p>
     </footer>
+
+    <script language="javascript" type="text/javascript" src="./src/slider.js"></script>
+
 </body>
 
 </html>
