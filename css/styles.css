@@ -243,6 +243,7 @@ p {
     justify-content: center;
 }
 
+
 .slider-image img:hover+.description,
 .description:hover {
     color: rgb(242, 242, 242, 1);
@@ -252,9 +253,6 @@ p {
         1px -1px 0 #000,
         -1px 1px 0 #000,
         1px 1px 0 #000;
-}
-
-.slider-image img:hover + .description {
     background: rgba(0, 0, 0, 0.5);
 }
 
