@@ -2,7 +2,7 @@
     --white: #ffffff;
     --black: #212121;
     --primary: #2a5994;
-    --secondary: #be9826;
+    --secondary: #d8ae2f;
 
     --gray: #c9c9c9;
 
@@ -39,7 +39,7 @@ header {
 
 header h1 {
     color: lavenderblush;
-    font-weight: 500;
+    font-weight: 450;
 }
 
 .container {
@@ -206,11 +206,16 @@ p {
 } */
 
 .slider-image img {
-    /* width: fit-content;
-    height: fit-content; */
+    height: 45rem;
     object-fit: cover;
     vertical-align: middle;
     justify-content: center;
+}
+
+.slider-image img:hover+.description,
+.description:hover {
+    color: rgb(242, 242, 242, 1);
+    visibility: visible;
 }
 
 .slider-button-container {
@@ -227,14 +232,12 @@ p {
     width: 100%;
     position: relative;
     display: flex;
-    /* margin: auto; */
     background-color: #000000;
     overflow: hidden;
     align-items: center;
     justify-content: center;
 }
 
-/* Botones anterior y siguiente */
 .previmg,
 .nextimg {
     cursor: pointer;
@@ -266,10 +269,9 @@ p {
     background-color: var(--secondary)
 }
 
-/* Descripción de las fotos */
 .description {
-    color: #f2f2f2;
-    /* background-color: #000000b2; */
+    transition: all 0.25s;
+    color: rgba(242, 242, 242, 0.5);
     font-size: 16px;
     right: 0;
     padding: 8px 12px;
@@ -277,10 +279,11 @@ p {
     bottom: 8px;
     width: 100%;
     text-align: center;
-    text-shadow: 1px 1px 1rem #000000;
+    text-justify: distribute;
+    visibility: hidden;
+    cursor: pointer;
 }
 
-/* Numeración de las fotos */
 .enumeration {
     color: #f2f2f2;
     font-size: 12px;
@@ -288,10 +291,30 @@ p {
     position: absolute;
     top: 0;
     left: 0;
-    text-shadow: 1px 1px 2px #000000;
 }
 
-/* Puntos indicadores de las fotos */
+.description,
+.enumeration {
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    z-index: 2;
+}
+
+.description::after,
+.enumeration ::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
 .slider-point {
     cursor: pointer;
     height: 15px;
@@ -303,23 +326,19 @@ p {
     transition: background-color 0.6s ease;
 }
 
-/* Color de fondo del punto seleccionado */
 .active,
 .slider-point:hover {
     background-color: var(--primary);
 }
 
-/* Efecto de transición al cambiar de foto */
 .slider-image {
     display: none;
     -webkit-animation-name: fade;
-    /* el prefijo -webkit- es para soporte para chrome */
     -webkit-animation-duration: 1.5s;
     animation-name: fade;
     animation-duration: 1.5s;
 }
 
-/* Definir los fotogramas clave de la animación */
 @-webkit-keyframes fade {
     from {
         opacity: .4
@@ -340,7 +359,6 @@ p {
     }
 }
 
-/* Configuración para pantallas diminutas */
 @media only screen and (max-width: 480px) {
 
     .previmg,
@@ -378,19 +396,29 @@ p {
 }
 
 .service .service-icon {
-    height: 7rem;
-    width: 7rem;
+    height: 14rem;
+    width: 14rem;
     border-radius: 50%;
-    background-color: var(--primary);
+    background-color: var(--secondary);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.service p {
+
+.service .service-icon img {
+    border-radius: .5rem;
+}
+
+
+.service p, .service ul li {
     color: var(--black);
     text-align: center;
     font-size: 2rem;
+}
+
+.service p ul li, .service ul li {
+    text-align: left!important;
 }
 
 .service h3 {

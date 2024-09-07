@@ -38,8 +38,16 @@
     </div>
 
     <div class="slider-container">
-        <!-- <section class="hero"> -->
         <section class="slider">
+
+            <div class="slider-image">
+                <div class="enumeration">Project (1/5) - Fast Totem</div>
+                <img src="./assets/projects/fast_totem.jpeg" width="100%">
+                <div class="description">Fast Totem is a Minecraft: Bedrock edition addon that will allow you to swap
+                    your undying totem and shield between your hands by only clicking them. Swapping will preserve all
+                    item data, and also adds a totem first activation and first use (achievement) alert, triggered when
+                    a player uses a totem! This alerts is completely customizable</div>
+            </div>
 
             <div class="slider-image">
                 <div class="enumeration">Project (1/5) - Ryuko Matoi</div>
@@ -67,14 +75,16 @@
 
             <div class="slider-image">
                 <div class="enumeration">Project (5/5) - Bogotá</div>
-                <img src="./assets/bogota.jpeg" width="100%">
+                <img src="./assets/bogota.jpeg" width="100%" height="100%">
                 <div class="description">SAQUENME DE AQUÍ</div>
             </div>
 
-            <a class="nextimg" onclick="nextImage(1)">&#10097;</a>
-            <a class="previmg" onclick="nextImage(-1)">&#10096;</a>
+            <a class="nextimg" onclick="nextImage(1, true)">&#10097;</a>
+            <a class="previmg" onclick="nextImage(-1, true)">&#10096;</a>
         </section>
-        <!-- <div class="hero-content">
+
+        <!-- <section class="hero">
+         <div class="hero-content">
             <h2 class="title">Bedrock Add-On Making & Fabric Modding</h2>
 
             <div class="location">
@@ -96,27 +106,14 @@
                 src="https://images.unsplash.com/photo-1580501170888-80668882ca0c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80" />
             <img class="slider-item"
                 src="https://images.unsplash.com/photo-1572508589584-94d778209dd9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80" />
-        </div> .hero-content end
-
-        <div class="slider">
-            <img
-                src="https://images.unsplash.com/photo-1580501170961-bb0dbf63a6df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2970&q=80" />
-            <img
-                src="https://images.unsplash.com/photo-1580501170888-80668882ca0c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80" />
-            <img
-                src="https://images.unsplash.com/photo-1572508589584-94d778209dd9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80" />
-        </div> -->
-
-        <!-- </section> -->
-
-
+        </div> .hero-content end -->
 
         <section class="slider-button-container">
             <span class="slider-point" onclick="imageSelected(1)"></span>
-            <span class="slider-point" onclick="imageSelected(2)"></span>
-            <span class="slider-point" onclick="imageSelected(3)"></span>
-            <span class="slider-point" onclick="imageSelected(4)"></span>
-            <span class="slider-point" onclick="imageSelected(5)"></span>
+            <span class="slider-point" onclick="imageSelected(2 )"></span>
+            <span class="slider-point" onclick="imageSelected(3 )"></span>
+            <span class="slider-point" onclick="imageSelected(4 )"></span>
+            <span class="slider-point" onclick="imageSelected(5 )"></span>
         </section>
     </div>
 
@@ -128,21 +125,50 @@
             <section class="service">
                 <h3>Bedrock Add-Ons</h3>
                 <div class="service-icon">
-                    <img src="./assets/fabricmc.png" width="22" height="22" alt="">
-                    <img src="./assets/fabricmc.png" width="22" height="22" alt="">
+                    <img src="./assets/bedrock.png" width="44" height="44" alt="">
+                    <img src="./assets/languages/javascript.png" width="44" height="44" alt="">
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut accusamus eligendi doloribus repellat
-                    deserunt
-                    placeat iusto, consectetur error, assumenda dolores voluptate nihil modi vel architecto illo quidem
-                    sapiente
-                    dolor tenetur.</p>
+                <p>
+                    I'm a skilled JavaScript developer specializing in Minecraft Bedrock addons. I can create:
+                </p>
+
+                <ul>
+                    <li>
+                        Clan Systems
+                    </li>
+                    <li>Scripted UI (behavior pack-based, NO JSON UI)</li>
+
+                    <li>
+                        Custom Ranks (shown in chat or name tags)
+                    </li>
+
+                    <li>
+                        Warp System (teleport using commands or UI)
+                    </li>
+
+                    <li>
+                        UHC Systems (sidebars with game info)
+                    </li>
+
+                    <li>
+                        Custom Commands (with personalized prefixes)
+                    </li>
+
+                    <li>
+                        Prices vary based on complexity.
+                    </li>
+                </ul>
+
+                <p>
+                    Contact me with detailts about your project details for a quote!
+                </p>
             </section>
 
             <section class="service">
                 <h3><span class="stroked-text">Fabric Mod Development</span><span><br>Coming soon...</span></h3>
                 <div class="service-icon">
-                    <img src="./assets/fabricmc.png" width="22" height="22" alt="">
-                    <img src="./assets/fabricmc.png" width="22" height="22" alt="">
+                    <img src="./assets/fabricmc.png" width="44" height="44" alt="">
+                    <img src="./assets/fabricmc.png" width="44" height="44" alt="">
                 </div>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut accusamus eligendi doloribus repellat
                     deserunt
@@ -154,8 +180,8 @@
             <section class="service">
                 <h3>Scripting</h3>
                 <div class="service-icon">
-                    <img src="./assets/fabricmc.png" width="22" height="22" alt="">
-                    <img src="./assets/fabricmc.png" width="22" height="22" alt="">
+                    <img src="./assets/fabricmc.png" width="44" height="44" alt="">
+                    <img src="./assets/fabricmc.png" width="44" height="44" alt="">
                 </div>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut accusamus eligendi doloribus repellat
                     deserunt
