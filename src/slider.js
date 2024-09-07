@@ -1,5 +1,5 @@
 let thisImage = 1;
-let swapImageDelay;
+var swapImageDelay = 0;
 show(thisImage);
 
 function nextImage(control, fromButton = false) {
@@ -38,6 +38,8 @@ function show(control) {
 
 setInterval(() => {
     if (Date.now() > swapImageDelay) {
-        nextImage(1)
+        nextImage(1, false)
     }
 }, 5000)
+
+console.log("squigga")
