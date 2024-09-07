@@ -157,7 +157,8 @@ h3 {
 
 .main-nav a:hover {
     background-color: var(--secondary);
-    color: var(--black)
+    color: var(--black);
+    border-radius: .5rem;
 }
 
 .hero {
@@ -246,6 +247,15 @@ p {
 .description:hover {
     color: rgb(242, 242, 242, 1);
     visibility: visible;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+.slider-image img:hover + .description {
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .previmg,
@@ -280,8 +290,9 @@ p {
 }
 
 .description {
-    transition: all 0.25s;
-    color: rgba(242, 242, 242, 0.5);
+    transition: all 0.5s;
+    color: rgba(242, 242, 242, 0);
+    background: rgba(0, 0, 0, 0);
     font-size: 16px;
     right: 0;
     padding: 8px 12px;
@@ -301,19 +312,16 @@ p {
     position: absolute;
     top: 0;
     left: 0;
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .description,
 .enumeration {
-    text-shadow:
-        -1px -1px 0 #000,
-        1px -1px 0 #000,
-        -1px 1px 0 #000,
-        1px 1px 0 #000;
+    text-shadow: none;
     z-index: 2;
 }
 
-.description::after,
+/* .description::after,
 .enumeration ::after {
     content: "";
     position: absolute;
@@ -323,7 +331,7 @@ p {
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     z-index: -1;
-}
+} */
 
 .slider-point {
     cursor: pointer;
