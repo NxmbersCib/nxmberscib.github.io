@@ -205,18 +205,7 @@ p {
     justify-content: center; 
 } */
 
-.slider-image img {
-    height: 45rem;
-    object-fit: cover;
-    vertical-align: middle;
-    justify-content: center;
-}
 
-.slider-image img:hover+.description,
-.description:hover {
-    color: rgb(242, 242, 242, 1);
-    visibility: visible;
-}
 
 .slider-button-container {
     text-align: center;
@@ -229,13 +218,34 @@ p {
 
 .slider {
     height: 45rem;
+    max-height: 45rem;
     width: 100%;
     position: relative;
     display: flex;
     background-color: #000000;
-    overflow: hidden;
     align-items: center;
     justify-content: center;
+}
+
+.slider-image {
+    height: 45rem;
+    width: 100%;
+    position: absolute;
+}
+
+.slider-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    position: absolute;
+    vertical-align: middle;
+    justify-content: center;
+}
+
+.slider-image img:hover+.description,
+.description:hover {
+    color: rgb(242, 242, 242, 1);
+    visibility: visible;
 }
 
 .previmg,
@@ -411,14 +421,16 @@ p {
 }
 
 
-.service p, .service ul li {
+.service p,
+.service ul li {
     color: var(--black);
     text-align: center;
     font-size: 2rem;
 }
 
-.service p ul li, .service ul li {
-    text-align: left!important;
+.service p ul li,
+.service ul li {
+    text-align: left !important;
 }
 
 .service h3 {
