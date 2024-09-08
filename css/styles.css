@@ -27,7 +27,7 @@ body {
     font: 16px;
     /* 1rem = 10px */
     font-family: "Rubik", sans-serif;
-    background-image: linear-gradient(to top, #dfe9f3 0%, var(--white) 100%);
+    /* background-image: linear-gradient(to top, #dfe9f3 0%, var(--white) 100%); */
 }
 
 header {
@@ -40,6 +40,14 @@ header {
 header h1 {
     color: lavenderblush;
     font-weight: 450;
+}
+
+main {
+    background-color: #dbdbdb;
+}
+
+body {
+    background-color:#cacaca;
 }
 
 .container {
@@ -123,10 +131,11 @@ h3 {
     flex-direction: column;
 } */
 .main-nav {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-evenly;
 }
 
@@ -139,7 +148,7 @@ h3 {
     text-decoration: none;
     font-size: 1.50rem;
     font-weight: 200;
-    padding: 1rem;
+    padding: 1rem;  
 }
 
 @media (min-width: 768px) {
@@ -232,6 +241,18 @@ p {
     height: 45rem;
     width: 100%;
     position: absolute;
+}
+
+@media (max-width: 768px) {
+    .slider, .slider-image, .slider-container {
+        height: 22.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .slider, .slider-image, .slider-container {
+        height: 22.5rem;
+    }
 }
 
 .slider-image img {
@@ -388,6 +409,49 @@ p {
     }
 }
 
+
+/*
+ About Me
+*/
+
+.aboutme {
+    width: 75%;
+    /* margin: 0 auto; */
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutme p {
+    font-size: 2rem;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .aboutme {
+        width: 90%;
+    }
+    .aboutme p {
+        font-size: 2rem;
+    }
+}
+
+.skillset {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.skillset img {
+    width: 4.4rem;
+    height: 4.4rem;
+    margin: 1rem;
+    object-fit: contain;
+    -webkit-box-shadow: 0px 0px 9px -3px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 9px -3px rgba(0, 0, 0, 1);
+    box-shadow: 0px 0px 9px -3px rgba(0, 0, 0, 1);
+    border-radius: .5rem;
+}
 
 /*
  Services
