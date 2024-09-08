@@ -142,6 +142,7 @@ h3 {
 
 .main-nav a {
     width: auto;
+    transition: all 0.25s;
     display: block;
     text-align: center;
     color: var(--white);
@@ -453,21 +454,33 @@ p {
     align-content: center;
     gap: 1rem;
 }
-
-.skillset div p {
-    transition: all 0.25s;
-    color: rgba(0, 0, 0, 0);
-    background-color: rgba(0, 0, 0, 0);
-    text-shadow: none;
-    visibility: hidden;
-    font-size: 2rem;
+.skillset div {
+    width: 4.4rem;
+    height: 4.4rem;
     position: relative;
-    object-fit: contain;
-    z-index: 5;
-    text-align: center;
-    margin: -160% -50%;
 }
 
+.skillset div img {
+    width: 100%;
+    height: 100%;
+}
+
+.skillset div p {
+    position: absolute;
+    top: -90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.25s;
+    color: rgba(0, 0, 0, 1);
+    background-color: rgba(0, 0, 0, 0);
+    text-shadow: none;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    z-index: 5;
+    opacity: 0;
+    text-align: center;
+    border-radius: 0.5rem;
+}
 
 .skillset div img:hover+p {
     color: rgba(255, 255, 255, 1);
@@ -477,11 +490,10 @@ p {
         1px -1px 0 #000,
         -1px 1px 0 #000,
         1px 1px 0 #000;
-    visibility: visible;
+    opacity: 1;
 }
-.skillset div img:hover+p::after{
-    background-color: rgba(0, 0, 0, 0.75);
-}
+
+
 
 .skillset div img {
     transition: all 0.25s;
@@ -491,17 +503,8 @@ p {
     width: 5.5rem;
     height: 5.5rem;
     margin: -1.2rem -0.6rem;
-    background-color: var(--secondary);
+    background-color: rgba(216, 174, 47, 0.7);;
 
-}
-
-
-.skillset div {
-    display: inline-block;
-    width: 4.4rem;
-    height: 4.4rem;
-    text-align: center;
-    /* position: relative; */
 }
 
 
