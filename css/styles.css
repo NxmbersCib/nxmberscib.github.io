@@ -467,6 +467,7 @@ p {
 
 .skillset div p {
     position: absolute;
+    user-select: none;
     top: -90%;
     left: 50%;
     transform: translate(-50%, -50%);
