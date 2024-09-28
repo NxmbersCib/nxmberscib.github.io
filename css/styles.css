@@ -15,6 +15,7 @@ html {
     font-size: 62.5%;
     box-sizing: border-box;
     /* Box model hack */
+    scroll-snap-type: y mandatory;
 }
 
 *,
@@ -225,6 +226,8 @@ p {
 .slider-container {
     height: 45rem;
     width: 100%;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
 }
 
 .slider {
@@ -423,6 +426,8 @@ p {
 
 .aboutme {
     width: 75%;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
     /* margin: 0 auto; */
     align-items: center;
     justify-content: center;
@@ -454,6 +459,7 @@ p {
     align-content: center;
     gap: 1rem;
 }
+
 .skillset div {
     width: 4.4rem;
     height: 4.4rem;
@@ -503,7 +509,8 @@ p {
     width: 5.5rem;
     height: 5.5rem;
     margin: -1.2rem -0.6rem;
-    background-color: rgba(216, 174, 47, 0.7);;
+    background-color: rgba(216, 174, 47, 0.7);
+    ;
 
 }
 
@@ -529,6 +536,11 @@ p {
 /*
  Services
 */
+
+.services {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
 
 @media (min-width: 768px) {
     .services {
@@ -609,7 +621,10 @@ p {
     margin-bottom: 1rem;
 }
 
-.fieldset-container {}
+.fieldset-container {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
 
 .fieldset-singlefield {
     margin-bottom: 1rem;
@@ -637,4 +652,8 @@ p {
 
 #container {
     padding: 2rem;
+}
+
+footer {
+    text-align: center;
 }
