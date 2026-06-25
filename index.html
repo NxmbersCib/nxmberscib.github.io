@@ -1,309 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link rel="icon" q type="image/png" href="https://s.namemc.com/2d/skin/face.png?id=1dd9041d59a120db">
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-        rel="stylesheet">
-    <title>NxmbersCib's Portfolio</title>
-
-    <link rel="preload" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/normalize.css">
-
-    <link rel="preload" href="./css/styles.css" as="style">
-    <link rel="stylesheet" href="./css/styles.css">
+    <title>NxmbersCib - Bedrock Developer</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <header>
-        <h1 class="title">NxmbersCib - Minecraft Developer</h1>
-    </header>
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="skin_face.png" alt="Logo" class="logo-img">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-    <div class="nav-bg">
-        <nav class="main-nav container">
-            <a href="#">Start</a>
-            <a href="#">About Me</a>
-            <a href="#">Clients</a>
-            <a href="#">Contact</a>
-        </nav>
-    </div>
-
-    <div class="slider-container">
-        <section class="slider">
-
-            <div class="slider-image">
-                <div class="enumeration">Project (1/7) - Fast Totem</div>
-                <img src="./assets/projects/fast_totem.jpeg" width="100%" height="100%">
-                <div class="description">Fast Totem is a Minecraft: Bedrock edition addon that will allow you to swap
-                    your undying totem and shield between your hands by only clicking them. Swapping will preserve all
-                    item data, and also adds a totem first activation and first use (achievement) alert, triggered when
-                    a player uses a totem! This alerts is completely customizable</div>
-            </div>
-
-            <div class="slider-image">
-                <div class="enumeration">Project (2/7) - Ryuko Matoi</div>
-                <img src="./assets/ryuko.jpg" width="100%" height="100%">
-                <div class="description">MI VIEJAA</div>
-            </div>
-
-            <div class="slider-image">
-                <div class="enumeration">Project (3/7) - Convex!</div>
-                <img src="./assets/convex.png" width="100%" height="100%">
-                <div class="description">Codea del culo</div>
-            </div>
-
-            <div class="slider-image">
-                <div class="enumeration">Project (4/7) - Demos</div>
-                <img src="./assets/demos.png" width="100%" height="100%">
-                <div class="description">Ladrón pendejo W geo borra la cuenta</div>
-            </div>
-
-            <div class="slider-image">
-                <div class="enumeration">Project (5/7) - The Rumbling</div>
-                <img src="./assets/rumbling.jpg" width="100%" height="100%">
-                <div class="description">Is coming for you.</div>
-            </div>
-
-            <div class="slider-image">
-                <div class="enumeration">Project (6/7) - Bogotá</div>
-                <img src="./assets/bogota.jpeg" width="100%" height="100%">
-                <div class="description">SAQUENME DE AQUÍ</div>
-            </div>
-
-            
-            <div class="slider-image">
-                <div class="enumeration">Project (7/7) - Isaac Isaac Cardenas</div>
-                <img src="./assets/Isaac_Cardenas.webp" width="100%" height="100%">
-                <div class="description">SAQUENME DE AQUÍ</div>
-            </div>
-
-            <a class="nextimg" onclick="nextImage(1, true)">&#10097;</a>
-            <a class="previmg" onclick="nextImage(-1, true)">&#10096;</a>
-        </section>
-
-        <!-- <section class="hero">
-         <div class="hero-content">
-            <h2 class="title">Bedrock Add-On Making & Fabric Modding</h2>
-
-            <div class="location">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="64"
-                    height="64" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff2825" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
-                    <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
-                </svg>
-                <p>Bogotá, Colombia</p>
-
-            </div>
-
-            <a href="#" class="button">Contact</a>
-            <img class="slider-item"
-                src="https://images.unsplash.com/photo-1580501170961-bb0dbf63a6df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2970&q=80" />
-            <img class="slider-item"
-                src="https://images.unsplash.com/photo-1580501170888-80668882ca0c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80" />
-            <img class="slider-item"
-                src="https://images.unsplash.com/photo-1572508589584-94d778209dd9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80" />
-        </div> .hero-content end -->
-
-        <section class="slider-button-container">
-            <span class="slider-point" onclick="imageSelected(1)"></span>
-            <span class="slider-point" onclick="imageSelected(2)"></span>
-            <span class="slider-point" onclick="imageSelected(3)"></span>
-            <span class="slider-point" onclick="imageSelected(4)"></span>
-            <span class="slider-point" onclick="imageSelected(5)"></span>
-            <span class="slider-point" onclick="imageSelected(6)"></span>
-            <span class="slider-point" onclick="imageSelected(7)"></span>
-        </section>
-    </div>
-
-    <main class="container shadow" id="container">
-
-        <section class="aboutme container">
-            <h2>About Me</h2>
-            <p>
-                Hi, I'm Cib!
-                I am a skilled Minecraft Developer with over four years of experience specializing in the Minecraft
-                Bedrock Scripting API and creating custom AddOns. My expertise extends to working on complex server-side
-                solutions and enhancing gameplay experiences through carefully crafted add-ons. Additionally, I am
-                expanding my knowledge in Minecraft: Java Edition development, focusing on popular
-                APIs such as Fabric and Bukkit for plugins.<br><br>
-
-                Whether you need a custom add-on designed from the ground up or improvements to an existing one, I can
-                help bring your vision to life. With a deep understanding of Minecraft's systems and a passion for
-                creativity, I deliver solutions tailored to your specific needs, ensuring that your server stands out
-                with unique and high-quality content.
-
-                Let's collaborate to create something truly exceptional for your Minecraft server.
-            </p>
-
-
-        </section>
-
-        <h2 class="skillset-title">Skill Set</h2>
-
-        <div class="skillset">
-            <div>
-                <img src="./assets/languages/javascript.png">
-                <p>JavaScript</p>
-            </div>
-            <div>
-                <img src="./assets/languages/typescript.png">
-                <p>TypeScript</p>
-            </div>
-            <div>
-                <img src="./assets/languages/java.png">
-                <p>Java</p>
-            </div>
-            <div>
-                <img src="./assets/languages/python.png">
-                <p>Python</p>
-            </div>
-            <div>
-                <img src="./assets/languages/c++.png">
-                <p>C++</p>
-            </div>
-            <div>
-                <img src="./assets/languages/nodejs.png">
-                <p>NodeJS</p>
-            </div>
-            <div>
-                <img src="./assets/languages/git.png">
-                <p>Git</p>
-            </div>
-            <div>
-                <img src="./assets/languages/fabricmc.png">
-                <p>Fabric</p>
-            </div>
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1>NxmbersCib</h1>
+            <h2>Minecraft Bedrock Developer</h2>
+            <p>Hello! I'm a Minecraft Bedrock add-on developer specialized in advanced scripting using TypeScript and JavaScript. This text is placeholder but illustrates my future presentation well.</p>
         </div>
 
-        <h2 class="services-title">My services</h2>
-
-        <div class="services">
-
-            <section class="service">
-                <h3>Bedrock Add-Ons</h3>
-                <div class="service-icon">
-                    <img src="./assets/bedrock.png" width="44" height="44" alt="">
-                    <img src="./assets/languages/javascript.png" width="44" height="44" alt="">
+        <div class="hero-carousel">
+            <div class="carousel-card">
+                <div class="image-wrapper">
+                    <button class="carousel-btn left">&#10094;</button>
+                    <img src="tu-proyecto.jpg" alt="Minecraft Project" id="carousel-img">
+                    <button class="carousel-btn right">&#10095;</button>
                 </div>
-                <p>
-                    I'm a skilled JavaScript developer specializing in Minecraft Bedrock addons. I can create:
-                </p>
-
-                <ul>
-                    <li>
-                        Clan Systems
-                    </li>
-                    <li>Scripted UI (behavior pack-based, NO JSON UI)</li>
-
-                    <li>
-                        Custom Ranks (shown in chat or name tags)
-                    </li>
-
-                    <li>
-                        Warp System (teleport using commands or UI)
-                    </li>
-
-                    <li>
-                        UHC Systems (sidebars with game info)
-                    </li>
-
-                    <li>
-                        Custom Commands (with personalized prefixes)
-                    </li>
-
-                    <li>
-                        Prices vary based on complexity.
-                    </li>
-                </ul>
-
-                <p>
-                    Contact me with detailts about your project details for a quote!
-                </p>
-            </section>
-
-            <section class="service">
-                <h3><span class="stroked-text">Fabric Mod Development</span><span><br>Coming soon...</span></h3>
-                <div class="service-icon">
-                    <img src="./assets/fabricmc.png" width="44" height="44" alt="">
-                    <img src="./assets/fabricmc.png" width="44" height="44" alt="">
+                <h3>Project Two</h3>
+                <div class="carousel-dots">
+                    <span class="dot"></span>
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut accusamus eligendi doloribus repellat
-                    deserunt
-                    placeat iusto, consectetur error, assumenda dolores voluptate nihil modi vel architecto illo quidem
-                    sapiente
-                    dolor tenetur.</p>
-            </section>
-
-            <section class="service">
-                <h3>Scripting</h3>
-                <div class="service-icon">
-                    <img src="./assets/fabricmc.png" width="44" height="44" alt="">
-                    <img src="./assets/fabricmc.png" width="44" height="44" alt="">
-                </div>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut accusamus eligendi doloribus repellat
-                    deserunt
-                    placeat iusto, consectetur error, assumenda dolores voluptate nihil modi vel architecto illo quidem
-                    sapiente
-                    dolor tenetur.</p>
-            </section>
-        </div> <!-- .services end -->
-
-        <section>
-            <h2>Contact Me</h2>
-
-            <div>
-                <form class="form">
-                    <fieldset>
-                        <legend>Contact me by filling the fields!</legend>
-
-                        <div class="fieldset-container">
-                            <div class="fieldset-singlefield">
-                                <label>Name</label>
-                                <input type="text" placeholder="Your Name">
-                            </div>
-
-                            <div class="fieldset-singlefield">
-                                <label>Email</label>
-                                <input type="email">
-                            </div>
-
-                            <div class="fieldset-singlefield">
-                                <label>Message</label>
-                                <textarea></textarea>
-                            </div>
-                        </div>
-
-                        <div class="sendbutton">
-                            <button type="submit" , class="button">Enviar</button>
-                        </div>
-
-                    </fieldset>
-
-                </form>
             </div>
-        </section>
+        </div>
+    </section>
 
+    <section id="about" class="about-section">
+        <div class="about-card">
+            <h2>About Me</h2>
+            <p>Hello! I'm a Minecraft Bedrock add-on developer specialized in advanced scripting using TypeScript and JavaScript. With over 2 years of experience, I've built custom gameplay mechanics, systems, and features for maps and servers.</p>
+            <p>I also have experience with low-level C++ to push the limits of what Bedrock can do. Whether you need a fully custom scripted addon or want to upgrade an existing one, I'm here to bring your ideas to life. Let's create something awesome together!</p>
+            <p class="contact-hint">(Feel free to contact me via Fiverr or Discord!)</p>
+        </div>
+        <div class="about-image">
+            <img src="tu-skin-3d.png" alt="NxmbersCib Skin">
+        </div>
+    </section>
 
+    <section id="projects" class="projects-section">
+        <div class="section-container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="grid-container">
+                <div class="project-card">
+                    <h3>Marketplace Maps</h3>
+                    <p>Advanced scripting using TypeScript and JSON to create interactive, high-quality Bedrock experiences for the Marketplace.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Custom Entities</h3>
+                    <p>Models and animations designed natively in Blockbench, fully integrated and optimized for smooth gameplay.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Low-Level Add-ons</h3>
+                    <p>Custom gameplay mechanics pushing the limits of the Bedrock engine with complex behaviors and systems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    </main>
+    <section id="videos" class="videos-section">
+        <div class="section-container">
+            <h2 class="section-title">Showcases</h2>
+            <div class="grid-container videos-grid">
+                <div class="video-placeholder">
+                    <span class="play-icon">▶</span>
+                    <p>Marketplace Trailer</p>
+                </div>
+                <div class="video-placeholder">
+                    <span class="play-icon">▶</span>
+                    <p>Add-on Showcase</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <footer>
-        <p>All rights reserved. NxmbersCib</p>
-    </footer>
+    <section id="contact" class="contact-section">
+        <div class="contact-card">
+            <h2>Let's Work Together</h2>
+            <p>Ready to bring your ideas to life? Whether you need a fully custom scripted addon or marketplace content, I'm available for commissions.</p>
+            <div class="contact-buttons">
+                <a href="#" class="btn fiverr-btn">Hire me on Fiverr</a>
+                <a href="#" class="btn discord-btn">Message on Discord</a>
+            </div>
+        </div>
+    </section>
 
-    <script language="javascript" type="text/javascript" src="./src/slider.js"></script>
-
+    <script src="script.js"></script>
 </body>
-
 </html>
